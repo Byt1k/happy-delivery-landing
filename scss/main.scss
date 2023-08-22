@@ -416,6 +416,12 @@ main {
             margin-bottom: 60px;
         }
     }
+
+    .levels {
+        &__item {
+            margin-bottom: 40px;
+        }
+    }
 }
 
 @media screen and (max-width: 991px) {
@@ -449,7 +455,6 @@ main {
     .levels {
         &__item {
             height: 500px;
-            margin-bottom: 40px;
         }
     }
 
