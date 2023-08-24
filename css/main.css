@@ -145,7 +145,7 @@ a {
   transition: all .3s ease;
 }
 
-.header__btn, .main__btn, .delivery__item a, .levels__item .btn {
+.header__btn, .main__btn, .delivery__item a, .advantages .btn, .levels__item .btn {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -163,13 +163,13 @@ a {
   transition: all .3s ease;
 }
 
-.header__btn, .main__btn, .delivery__item a {
+.header__btn, .main__btn, .delivery__item a, .advantages .btn {
   border-radius: 48px;
   background: #1268CD;
   color: #fff;
 }
 
-.header__btn:hover, .main__btn:hover, .delivery__item a:hover {
+.header__btn:hover, .main__btn:hover, .delivery__item a:hover, .advantages .btn:hover {
   background: #ff0458;
   color: #fff;
 }
@@ -399,7 +399,7 @@ main {
 }
 
 .levels {
-  padding: 150px 0;
+  padding-top: 150px;
 }
 
 .levels h2 {
@@ -457,6 +457,51 @@ main {
 
 .levels__item_first {
   color: #231F26;
+}
+
+.advantages {
+  padding-top: 150px;
+  padding-bottom: 120px;
+}
+
+.advantages h2 {
+  margin-bottom: 60px;
+}
+
+.advantages .item {
+  margin-bottom: 25px;
+  border-radius: 25px;
+  background: #162233;
+  padding: 25px 30px;
+  height: 300px;
+}
+
+.advantages .item .title {
+  height: 36px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 15px;
+}
+
+.advantages .item .title h4 {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.advantages .item p {
+  color: #E0E0E0;
+  font-weight: 500;
+  margin-top: 20px;
+  line-height: 26px;
+}
+
+.advantages .btn {
+  margin-top: 20px;
+  width: 250px;
 }
 
 .footer {
@@ -543,13 +588,19 @@ main {
   .levels__item {
     height: 500px;
   }
+  .advantages .item {
+    height: auto;
+  }
+  .advantages .btn {
+    margin-top: 0;
+  }
   .footer__menu {
     margin-top: 30px;
   }
 }
 
 @media screen and (max-width: 767px) {
-  .header__btn, .main__btn, .delivery__item a, .levels__item .btn {
+  .header__btn, .main__btn, .delivery__item a, .advantages .btn, .levels__item .btn {
     font-size: 14px;
   }
   h1 {
@@ -614,7 +665,9 @@ main {
   }
   .levels {
     padding-top: 100px;
-    padding-bottom: 50px;
+  }
+  .advantages .btn {
+    width: 100%;
   }
   .footer__menu {
     -webkit-box-orient: vertical;

@@ -291,7 +291,7 @@ main {
 }
 
 .levels {
-    padding: 150px 0;
+    padding-top: 150px;
 
     h2 {
         text-align: center;
@@ -347,6 +347,49 @@ main {
         &_first {
             color: #231F26;
         }
+    }
+}
+
+.advantages {
+    padding-top: 150px;
+    padding-bottom: 120px;
+
+    h2 {
+        margin-bottom: 60px;
+    }
+
+    .item {
+        margin-bottom: 25px;
+        border-radius: 25px;
+        background: #162233;
+        padding: 25px 30px;
+        height: 300px;
+
+
+        .title {
+            height: 36px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+
+            h4 {
+                font-size: 22px;
+                font-weight: 600;
+            }
+        }
+
+        p {
+            color: #E0E0E0;
+            font-weight: 500;
+            margin-top: 20px;
+            line-height: 26px;
+        }
+    }
+
+    .btn {
+        @extend %main-btn;
+        margin-top: 20px;
+        width: 250px;
     }
 }
 
@@ -458,6 +501,16 @@ main {
         }
     }
 
+    .advantages {
+        .item {
+            height: auto;
+        }
+
+        .btn {
+            margin-top: 0;
+        }
+    }
+
     .footer {
         &__menu {
             margin-top: 30px;
@@ -558,7 +611,12 @@ main {
 
     .levels {
         padding-top: 100px;
-        padding-bottom: 50px;
+    }
+
+    .advantages {
+        .btn {
+            width: 100%;
+        }
     }
 
     .footer {
