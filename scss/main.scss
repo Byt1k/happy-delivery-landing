@@ -329,9 +329,17 @@ main {
         ul li {
             font-weight: 600;
             margin-bottom: 30px;
+            display: flex;
 
             &::before {
-                content: '\2666';
+                content: '';
+                display: block;
+                min-width: 11px;
+                width: 11px;
+                height: 11px;
+                background: #fff;
+                transform: rotate(45deg);
+                margin-top: 6px;
                 margin-right: 10px;
             }
         }
@@ -346,6 +354,12 @@ main {
 
         &_first {
             color: #231F26;
+
+            ul li {
+                &::before {
+                    background: #231F26;
+                }
+            }
         }
     }
 }
@@ -411,8 +425,14 @@ main {
                 margin-bottom: 20px;
                 
                 &::before {
+                    content: '';
                     display: block;
-                    content: '\2666';
+                    min-width: 11px;
+                    width: 11px;
+                    height: 11px;
+                    background: #fff;
+                    transform: rotate(45deg);
+                    margin-top: 6px;
                     margin-right: 10px;
                 }
             }

@@ -441,10 +441,21 @@ main {
 .levels__item ul li {
   font-weight: 600;
   margin-bottom: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .levels__item ul li::before {
-  content: '\2666';
+  content: '';
+  display: block;
+  min-width: 11px;
+  width: 11px;
+  height: 11px;
+  background: #fff;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  margin-top: 6px;
   margin-right: 10px;
 }
 
@@ -457,6 +468,10 @@ main {
 
 .levels__item_first {
   color: #231F26;
+}
+
+.levels__item_first ul li::before {
+  background: #231F26;
 }
 
 .app {
@@ -535,8 +550,15 @@ main {
 }
 
 .app .item ul li::before {
+  content: '';
   display: block;
-  content: '\2666';
+  min-width: 11px;
+  width: 11px;
+  height: 11px;
+  background: #fff;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  margin-top: 6px;
   margin-right: 10px;
 }
 
