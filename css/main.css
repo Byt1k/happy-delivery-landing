@@ -145,7 +145,7 @@ a {
   transition: all .3s ease;
 }
 
-.header__btn, .main__btn, .delivery__item a, .advantages .btn, .levels__item .btn {
+.header__btn, .main__btn, .delivery__item a, .app .btn, .levels__item .btn {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -163,13 +163,13 @@ a {
   transition: all .3s ease;
 }
 
-.header__btn, .main__btn, .delivery__item a, .advantages .btn {
+.header__btn, .main__btn, .delivery__item a, .app .btn {
   border-radius: 48px;
   background: #1268CD;
   color: #fff;
 }
 
-.header__btn:hover, .main__btn:hover, .delivery__item a:hover, .advantages .btn:hover {
+.header__btn:hover, .main__btn:hover, .delivery__item a:hover, .app .btn:hover {
   background: #ff0458;
   color: #fff;
 }
@@ -459,49 +459,99 @@ main {
   color: #231F26;
 }
 
-.advantages {
-  padding-top: 150px;
-  padding-bottom: 120px;
+.app {
+  padding: 150px 0;
 }
 
-.advantages h2 {
-  margin-bottom: 60px;
+.app .title {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: normal;
 }
 
-.advantages .item {
-  margin-bottom: 25px;
-  border-radius: 25px;
+.app .item {
+  position: relative;
+  width: 100%;
+  height: 260px;
+  border-radius: 20px;
   background: #162233;
-  padding: 25px 30px;
-  height: 300px;
+  padding: 70px 40px 0;
 }
 
-.advantages .item .title {
-  height: 36px;
+.app .item:first-child {
+  margin-top: 80px;
+}
+
+.app .item:not(:last-of-type) {
+  margin-bottom: 90px;
+}
+
+.app .item__name {
+  position: absolute;
+  top: -32px;
+  left: 40px;
+  height: 64px;
+  width: 260px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 15px;
-}
-
-.advantages .item .title h4 {
-  font-size: 22px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 15px;
+  background: #FFF;
+  color: #232323;
+  font-size: 28px;
   font-weight: 600;
 }
 
-.advantages .item p {
-  color: #E0E0E0;
-  font-weight: 500;
-  margin-top: 20px;
-  line-height: 26px;
+.app .item__title {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 30px;
 }
 
-.advantages .btn {
-  margin-top: 20px;
-  width: 250px;
+.app .item ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 4%;
+}
+
+.app .item ul li {
+  width: 48%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #FFF;
+  font-size: 20px;
+  line-height: normal;
+  margin-bottom: 20px;
+}
+
+.app .item ul li::before {
+  display: block;
+  content: '\2666';
+  margin-right: 10px;
+}
+
+.app .btn {
+  width: 255px;
+  height: 63px;
+  font-size: 17px;
+  font-weight: 600;
+  margin-top: 50px;
+}
+
+.app .main-img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
 }
 
 .footer {
@@ -588,11 +638,16 @@ main {
   .levels__item {
     height: 500px;
   }
-  .advantages .item {
+  .app .item {
+    margin-top: 50px;
     height: auto;
+    padding-bottom: 20px;
   }
-  .advantages .btn {
-    margin-top: 0;
+  .app .item ul li {
+    width: 100%;
+  }
+  .app .main-img {
+    margin-top: 50px;
   }
   .footer__menu {
     margin-top: 30px;
@@ -600,7 +655,7 @@ main {
 }
 
 @media screen and (max-width: 767px) {
-  .header__btn, .main__btn, .delivery__item a, .advantages .btn, .levels__item .btn {
+  .header__btn, .main__btn, .delivery__item a, .app .btn, .levels__item .btn {
     font-size: 14px;
   }
   h1 {
@@ -666,8 +721,9 @@ main {
   .levels {
     padding-top: 100px;
   }
-  .advantages .btn {
-    width: 100%;
+  .app .item {
+    padding-left: 20px;
+    padding-right: 20px;
   }
   .footer__menu {
     -webkit-box-orient: vertical;
